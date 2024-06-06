@@ -25,7 +25,7 @@ class Solution(object):
                 p2 -= 1
             p -= 1
 
-        # If there are any remaining elements in nums2 copy them alllll of dem
+        # If there are any remaining elements in nums2 copy them alllll of dem test
         while p2 >= 0:
             nums1[p] = nums2[p2]
             p2 -= 1
