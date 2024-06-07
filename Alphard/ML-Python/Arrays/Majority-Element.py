@@ -11,6 +11,7 @@ class Solution(object):
 
         for num in nums:
             if count == 0:
+                # Menerapkan nilai iterasi untuk di cek, jadi kalau misal nanti count sampai 0 lagi maka kandidate akan diganti
                 candidate = num
                 count = 1
             elif num == candidate:
