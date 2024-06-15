@@ -28,10 +28,14 @@ class Solution(object):
         :rtype: int
         """
         step = 0
-        for i in range(len(nums)):
-            if i > len(nums):
-                return false
-            else:
-                if nums[i] + 1 < len(nums) - i:
-                    step += 1
+        theEnd = 0
+        currentEnd = 0
+        
+        for i in range(len(nums) - 1):
+            theEnd = max(theEnd, i + nums[i])
+            if i == currentEnd:
+                step += 1
+                currentEnd = theEnd
+                if currentEnd >= len(nums) - 1:
+                    break
         return step
